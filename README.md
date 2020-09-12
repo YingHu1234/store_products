@@ -22,7 +22,7 @@
 
 
 ## 🧐 About <a name = "about"></a>
-To check how the sales and revenue for each product, Power BI would be used for drilling down the specific tables of products for monthly insights details inspection. 
+To check how the sales and revenue of each product, Power BI would be used for drilling down the specific tables of products for monthly insights details inspection. 
 Also, SQL joined some of the tables and got the cost and profit for classification and regression modeling purposes. 
 Lastly, processed accuracy testing and prediction by using Python scripts.
 
