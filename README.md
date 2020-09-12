@@ -6,7 +6,7 @@
 </p>
 
 <h3 align="center">:ice_cream: :fries:   Roventure Works Cycler</h3>
----
+
 
 <p align="center"> 🤖 This project is showing the classifiaction model tests and comapare their accuracy with confusion matrices. Besdies, I also used regression model for the revenue predictions by each categories of products. 
     <br> 
