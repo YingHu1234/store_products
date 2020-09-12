@@ -14,16 +14,12 @@
 
 ## 📝 Table of Contents
 + [About](#about)
-+ [Demo / Working](#demo)
-+ [How it works](#working)
-+ [Usage](#usage)
-+ [Getting Started](#getting_started)
-+ [Deploying your own bot](#deployment)
-+ [Built Using](#built_using)
-+ [TODO](../TODO.md)
-+ [Contributing](../CONTRIBUTING.md)
-+ [Authors](#authors)
-+ [Acknowledgments](#acknowledgement)
++ [Product Details](#product_details)
++ [SQL_Join](#join)
++ [Accuracy for Classification model](#classification_model)
++ [Decision Tree Regression ](#dt_regression)
++ [Conclusion](#conclusion)
+
 
 ## 🧐 About <a name = "about"></a>
 To check how the sales and revenue for each product, Power BI would be used for drilling down the specific tables of products for monthly insights details inspection. 
@@ -32,87 +28,86 @@ Lastly, processed accuracy testing and prediction by using Python scripts.
 
 ![Working](https://media.giphy.com/media/20NLMBm0BkUOwNljwv/giphy.gif)
 
-## 💭 Product Details <a name = "product_details"></a>
-
-
-
-## 🎈 Usage <a name = "usage"></a>
-
-To use the bot, type:
-```
-!dict word
-```
-The first part, i.e. "!dict" **is not** case sensitive.
-
-The bot will then give you the Oxford Dictionary (or Urban Dictionary; if the word does not exist in the Oxford Dictionary) definition of the word as a comment reply.
-
-### Example:
-
-> !dict what is love
-
-**Definition:**
-
-Baby, dont hurt me~
-Dont hurt me~ no more.
-
-**Example:**
-
-Dude1: Bruh, what is love?
-Dude2: Baby, dont hurt me, dont hurt me- no more!
-Dude1: dafuq?
-
-**Source:** https://www.urbandictionary.com/define.php?term=what%20is%20love
-
----
-
-<sup>Beep boop. I am a bot. If there are any issues, contact my [Master](https://www.reddit.com/message/compose/?to=PositivePlayer1&subject=/u/Wordbook_Bot)</sup>
-
-<sup>Want to make a similar reddit bot? Check out: [GitHub](https://github.com/kylelobo/Reddit-Bot)</sup>
-
-## 🏁 Getting Started <a name = "getting_started"></a>
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them.
+Power BI, SQL, Python or Jupyter Notebook
 
-```
-Give examples
-```
 
-### Installing
+## 💭 Product Details <a name = "product_details"></a>
 
-A step by step series of examples that tell you how to get a development env running.
+Used Power BI to connect each table for monthly details:
 
-Say what the step will be
+![image](https://github.com/YingHu1234/store_products/blob/master/img/BI1.PNG)
 
-```
-Give the example
-```
+![image](https://github.com/YingHu1234/store_products/blob/master/img/BI2.PNG)
 
-And repeat
+![image](https://github.com/YingHu1234/store_products/blob/master/img/BI3.PNG)
 
-```
-until finished
-```
+## 🎈 SQL-->Join tables <a name = "join"></a>
 
-End with an example of getting some data out of the system or using it for a little demo.
+Used SQL to join tables and get the cost and revenue by aggregation for 2017 sales:
 
-## 🚀 Deploying your own bot <a name = "deployment"></a>
-To see an example project on how to deploy your bot, please see my own configuration:
+![image](https://github.com/YingHu1234/store_products/blob/master/img/SQL1.PNG)
 
-+ **Heroku**: https://github.com/kylelobo/Reddit-Bot#deploying_the_bot
+![image](https://github.com/YingHu1234/store_products/blob/master/img/SQL2.PNG)
 
-## ⛏️ Built Using <a name = "built_using"></a>
-+ [PRAW](https://praw.readthedocs.io/en/latest/) - Python Reddit API Wrapper
-+ [Heroku](https://www.heroku.com/) - SaaS hosting platform
+![image](https://github.com/YingHu1234/store_products/blob/master/img/SQL3.PNG)
 
-## ✍️ Authors <a name = "authors"></a>
-+ [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
+![image](https://github.com/YingHu1234/store_products/blob/master/img/SQL4.PNG)
 
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
 
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
-+ Hat tip to anyone whose code was used
-+ Inspiration
-+ References
+## ✨ Accuracy for Classification model <a name = "classification_model"></a>
+
+Read document from SQL table and checked the category:
+
+
+![image](https://github.com/YingHu1234/store_products/blob/master/img/1.PNG)
+
+
+![image](https://github.com/YingHu1234/store_products/blob/master/img/2.PNG)
+
+
+![image](https://github.com/YingHu1234/store_products/blob/master/img/3.PNG)
+
+
+Used 6 Classification models for accuracy test, and DT had the highest accuracy since there were 71 mistakes. 
+
+1. Logistic Regression
+2. Decision Tree(DT)
+3. K neighbors classifier (KNN)
+4. Linear Discrininant Analysis (LDA)
+5. Gaussian Naive Bayes(GNB)
+6. SVC
+
+![image](https://github.com/YingHu1234/store_products/blob/master/img/4.PNG)
+
+![image](https://github.com/YingHu1234/store_products/blob/master/img/5.PNG)
+
+![image](https://github.com/YingHu1234/store_products/blob/master/img/6.PNG)
+
+![image](https://github.com/YingHu1234/store_products/blob/master/img/7.PNG)
+
+
+
+## 🚀 Decision Tree Regression <a name = "dt_regression"></a>
+
+Used DT Regression for revenue prediction:
+
+a. Tested accuracy: the errors were very low, which meant the model was good.
+b. For model categores: 
+    1--> Bikes
+    2--> Components (No sales in 2017）
+    3--> Clothing
+    4--> Accessories
+c. for example: if category is 3, qty is 2, cost is 4.5, price is 6.00, revenue would be 6.25 . shape(1,4)--> 1 observation and 4 features you need to input. 
+
+![image](https://github.com/YingHu1234/store_products/blob/master/img/DTR2.PNG)
+
+![image](https://github.com/YingHu1234/store_products/blob/master/img/DTR3.PNG)
+
+
+
+
+## 🎉 Conclusion <a name = "Conclusion"></a>
+
