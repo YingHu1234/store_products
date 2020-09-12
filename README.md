@@ -111,3 +111,4 @@ c. for example: if category is 3, qty is 2, cost is 4.5, price is 6.00, revenue 
 
 ## 🎉 Conclusion <a name = "Conclusion"></a>
 
+In conclusion,  it is very important to figure out the label and features in classification. Also, testing a model's accuracy is necessary before applying it to a model for prediction. This prediction can help set up the selling price for increasing revenue. 
