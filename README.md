@@ -22,9 +22,8 @@
 
 
 ## 🧐 About <a name = "about"></a>
-To check how the sales and revenue of each product, Power BI would be used for drilling down the specific tables of products for monthly insights details inspection. 
-Also, SQL joined some of the tables and got the cost and profit for classification and regression modeling purposes. 
-Lastly, processed accuracy testing and prediction by using Python scripts.
+
+Roventure is a store selling sports items. However, it involved some loss due to overstock, and the store doesn’t know how to adjust the sales price to reduce the overstock items. To control the inventory, reduce the overstock issues, and keep the competitive pricing. I need to use the regression model to predict the price based on the parameters: selling quantities, return items, cost, and the categories.
 
 ![Working](https://media.giphy.com/media/20NLMBm0BkUOwNljwv/giphy.gif)
 
